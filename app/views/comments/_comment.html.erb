@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col">
+    <strong>By:</strong> <%= comment.commenter %>
+  </div>
+  <div class="col text-right">
+    <%= link_to [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <i class="material-icons">delete</i>
+    <% end %>
+  </div>
+</div>
+<p><%= comment.body %></p>
